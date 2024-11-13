@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variabile Structurate</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <a href="index.html">Acasă</a>
+        <a href="simple.html">Simple</a>
+        <a href="structurate.html">Structurate</a>
+    </nav>
+
+    <div class="Titlu"><h1>Variabile Structurate</h1></div>
+
+    <div class="teorie">
+        <ul>
+            <h3>Acest tip de variabile sunt variabilele care contin mai multe elemente.</h3>
+            
+            <li onclick="appear(this)" style="cursor: pointer;"><b>Vectori</b></li>
+            <div class="info" style="display: none;">
+                <p>Vectorii sau tablourile unidimensionale sunt structuri de date bine definite si organizate in memorie. Cu
+ajutorul acestora, se pot păstra in memorie si accesa ulterior mai multe variabile, fără a fi nevoie de reținerea explicită a fiecăreia dintre ele.</p>
+                <ul>
+                    <p>Pot crește sau micșora dinamic. </p>
+                    <p>Oferă funcții utile pentru manipularea datelor (inserare, ștergere, sortare etc.).</p>
+                </ul>
+                <h3>Exemplu:</h3>
+                <pre><code>#include <iostream>
+using namespace std;
+int v[100];
+int main() {
+ ...
+ return 0;
+}
+</code></pre>
+            </div>
+            
+            <li onclick="appear(this)" style="cursor: pointer;"><b>Matrice</b></li>
+            <div class="info" style="display: none;">
+                <h3>În C++, matricele reprezintă o structură de date standard, folosită pentru a stoca o colecție de date de același tip, organizate pe linii și coloane. Practic, o matrice este extinderea la două dimensiuni a unui vector, de unde și numele alternativ de tablou bidimensional.</h3>
+                <p>Declarare</p>
+                <pre><code>int A[3] [4]; //Asa declaram o matrice cu 3 linii si 4 coloane.</code></pre>
+                <p>Citire::</p>
+                <pre><code>cin >> n >> m;
+for(int i = 0 ; i < n ; i ++)
+    for(int j = 0 ; j < m ; j ++)
+        cin >> A[i][j];};</code></pre>
+		<p>Afisare</p>
+                <pre><code>for(int i = 0 ; i < n ; i ++)
+{
+    for(int j = 0 ; j < m ; j ++)
+        cout << A[i][j] << " ";
+    cout << "\n";}</code></pre>
+		</code></pre>
+            </div>
+  
+  <li onclick="appear(this)" style="cursor: pointer;"><b>Struct</b></li>
+            <div class="info" style="display: none;">
+                <h3>Struct este o structura de date care iti permite sa grupezi mai multe elemente sub o singura umbrela. Aceste elemente sunt denumite “membrii” si pot avea tipuri diferite. De exemplu pentru definirea unei structuri ce reprezinta o masina, analizam codul de mai jos:</h3>
+                <p>Declarare</p>
+                <pre><code>struct masina{
+    char marca[50];
+    char culoare[20];
+    int capacitate_rezervor;
+    int an_fabricatie;
+    float pret;
+    float km_parcursi;
+} V[20]; // Definim un vector cu 20 de masin</code></pre>
+            </div>
+  
+		<li onclick="appear(this)" style="cursor: pointer;"><b>Probleme matrici</b></li>
+            <div class="info" style="display: none;">
+			<h3>Problema 1</h3>
+			<pre><code>Se dă o matrice mat cu >= 1m >= 1 linii șin >= n >= 1 coloane, având toate elementele distincte. Să se interschimbe liniile pe care se află cel mai mic și respectiv cel mai mare element din matrice.</pre></code>
+			<h3>Problema 2</h3>
+			<pre><code>Se dă o matrice mat cum >= 1m >= 1 linii și n >= 1n >= 1 coloane. Să se rotească cu 90 de grade sensul acelor de ceasornic matricea dată.</pre></code></div>
+			
+			<li onclick="appear(this)" style="cursor: pointer;"><b>Probleme vectori</b></li>
+            <div class="info" style="display: none;">
+			<h3>Problema 1</h3>
+			<pre><code>Se dă un șir cu n elemente, numere naturale. Determinați diferența în valoare absolută dintre numărul de valori pare din șir și numărul de valori impare din șir.</pre></code>
+			<h3>Problema 2</h3>
+			<pre><code>Se citește un vector cu n elemente, numere naturale. Să se înlocuiască ultimul element prim din vector cu 0, apoi să se afișeze vectorul.</pre></code>
+					</div>
+					
+			<li onclick="appear(this)" style="cursor: pointer;"><b>Probleme struct</b></li>
+            <div class="info" style="display: none;">
+			<h3>Problema 1</h3>
+			<pre><code>Se citesc datele despre elevii unei clase, respectiv numele şi data naşterii. Să se ordoneze elevii în ordinea crescătoare după data naşterii şi să se afişeze această situaţie.</pre></code>
+			<h3>Problema 2</h3>
+			<pre><code>Să se afişeze reprezentarea internă a unei date de tip caracter folosind reprezentarea pe biţi.</pre></code>
+			
+    </ul>
+
+	</div>
+	
+		</div>
+
+    <script>
+        function appear(element) {
+            const infoDiv = element.nextElementSibling;
+            if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+                infoDiv.style.display = "block";
+            } else {
+                infoDiv.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
